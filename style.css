@@ -1,0 +1,284 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	color: #333;
+	background: linear-gradient(to bottom, #a8edea, #fed6e3);
+	align-items: center;
+	margin: 0;
+	height: 100vh;
+	/* background-color: #f9f9f9; */
+}
+
+#game-container {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin: 50px auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	/* justify-content: center; */
+	align-items: center;
+	background: rgba(255, 255, 255, 0.8);
+	text-align: center;
+}
+h1 {
+	font-family: "Pacifico", cursive;
+	color: #ff6f61;
+}
+#word-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.logo {
+	height: 80px;
+	width: 83px;
+}
+.letter-btn {
+	margin: 10px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+	color: #fff;
+	background: #ff6f61;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+.letter-btn:hover {
+	background-color: #ff402e;
+}
+.letter-btn.disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+#message {
+	font-size: 18px;
+	font-weight: bold;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+#restart-btn {
+	font-weight: bold;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 10px;
+	background-color: #ff6f61;
+	color: #fff;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#restart-btn:hover {
+	background-color: #ff402e;
+}
+#hangman-img {
+	width: 180px;
+	height: 180px;
+	margin: 0 20px;
+	transition: transform 0.3s ease-in-out;
+}
+.hangman-image:hover {
+	transform: scale(1.05);
+}
+
+/* #hangman-img {
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	transition: transform 0.2s ease-in-out;
+} */
+#clue {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: darkblue;
+	
+}
+
+#tries {
+	position: relative;
+	left: 30%;
+	margin: 10px;
+	
+	/* margin-left: 900px; */
+	padding: 10px 20px;
+	border: none;
+	border-radius: 10px;
+	background-color: #4fd8d8;
+	color: #fff;
+	cursor: pointer;
+}
+/* Media Queries */
+
+/* Small screens (max-width: 768px) */
+@media (max-width: 768px) {
+	#game-container {
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		margin: 20px auto;
+		height: 100vh;
+		padding: 10px;
+		align-items: center;
+	}
+	#word-container {
+		font-size: 18px;
+	}
+	.letter-btn {
+		margin: 5px;
+		padding: 5px 10px;
+	}
+	#letters-container {
+		width: 350px;
+	}
+	#message {
+		font-size: 14px;
+		font-weight: bold;
+	}
+	#restart-btn {
+		height: 30px;
+		padding: 5px 10px;
+	}
+	#hangman-img {
+		width: 120px;
+		height: 120px;
+	}
+	#clue {
+		font-size: 14px;
+	}
+	
+	#tries {
+		/* margin: 5px; */
+		left: 30%;
+		padding: 13px 5px 10px 5px;
+	}
+}
+
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+	#game-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		margin: 10px auto;
+		padding: 5px;
+		align-items: center;
+		background:#ebfcfc;
+		
+	}
+
+	#letters-container {
+		/* width: 280px; */
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+	}
+	#word-container {
+		font-size: 20px;
+
+	}
+	.letter-btn {
+		height: 30px;
+		width: 30px;
+		border-radius: 100%;
+		margin: 2px;
+		padding: 2px 5px;
+	}
+	#message {
+		font-weight: bold;
+		font-size: 30px;
+		margin: 10px 0 10px 0;
+	}
+	#restart-btn {
+		margin-top: 30px;
+		height: 40px;
+		font-size: 20px;
+		padding: 2px 5px;
+	}
+	#hangman-img {
+		width: 170px;
+		height: 170px;
+		margin: 30px 0 0px 0;
+	}
+	#clue {
+		margin-top: 40px;
+		font-size: 21px;
+	}
+
+	#tries {
+		left: 9%;
+		width: 150px;
+		flex-wrap: wrap;
+		margin: 20px 0 40px 0;
+		
+		padding: 15px;
+		margin-left: 170px;
+	}
+}
+
+@media (max-width: 320px) {
+	#game-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		margin: 10px auto;
+		padding: 5px;
+		align-items: center;
+		background:#ebfcfc;
+
+
+	}
+
+	#letters-container {
+		width: 270px;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+	}
+	#word-container {
+		font-size: 20px;
+	}
+	.letter-btn {
+		margin: 2px;
+		padding: 2px 5px;
+	}
+	#message {
+		font-weight: bold;
+		font-size: 15px;
+	}
+	#restart-btn {
+		font-size: medium;
+		padding: 2px 5px;
+	}
+	#hangman-img {
+		width: 120px;
+		height: 120px;
+		margin: 15px 0 0px 0;
+	}
+	#clue {
+		margin-top: 10px;
+		font-size: 18px;
+	}
+	
+	#tries {
+		left: 20%;
+		margin: 2px;
+		padding: 15px 0 0 0;
+	
+	}
+}
