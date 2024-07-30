@@ -127,12 +127,4 @@ const handleGameOver = () => {
 		disableAllButtons();
 	}
 };
-//testing
-// const triesElement = document.getElementById('tries');
-// const audioElement = document.getElementById('hangman-aud');
 
-// triesElement.addEventListener('DOMSubtreeModified', () => {
-//   if (triesElement.textContent.includes('Wrong')) {
-//     audioElement.play();
-//   }
-// });
