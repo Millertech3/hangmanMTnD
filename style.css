@@ -96,12 +96,7 @@ h1 {
 	transform: scale(1.05);
 }
 
-/* #hangman-img {
-	width: 200px;
-	height: 200px;
-	margin: 20px;
-	transition: transform 0.2s ease-in-out;
-} */
+
 #clue {
 	font-size: 18px;
 	font-weight: bold;
