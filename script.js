@@ -53,7 +53,7 @@ function init() {
 		lettersContainer.appendChild(letterBtn);
 	}
 }
-
+//after  click this disables all buttons 
 function disableAllButtons() {
 	const buttons = document.querySelectorAll(".letter-btn");
 	buttons.forEach((button) => {
@@ -65,6 +65,7 @@ function disableAllButtons() {
 restartBtn.addEventListener("click", init);
 
 init();
+//this handles guesses 
 
 function handleGuess(event) {
 	const letter = event.target.innerText.toLowerCase();
